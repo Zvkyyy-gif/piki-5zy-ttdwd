@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Piki Website</title>
+
+<meta name="theme-color" content="#00ff88">
+<meta name="description" content="Piki Website - TikTok HD Downloader Premium">
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+<!-- Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= LOADER ================= -->
+
+<div class="pageLoader">
+
+<div class="loaderRing"></div>
+
+<p class="loaderText">
+Loading...
+</p>
+
+</div>
+
+<!-- ================= WALLPAPER ================= -->
+
+<img src="img/wpp.gif" class="wallpaper" alt="Wallpaper">
+<div class="wallpaperOverlay"></div>
+
+<!-- ================= RGB BACKGROUND ================= -->
+
+<div class="rgbAura rgbAura1"></div>
+<div class="rgbAura rgbAura2"></div>
+<div class="rgbAura rgbAura3"></div>
+
+<!-- ================= PARTICLES ================= -->
+
+<div id="particles"></div>
+
+<!-- ================= MAIN ================= -->
+
+<div class="container">
+
+<div class="mainPanel">
+
+<div class="rgbLine"></div>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+<img
+src="img/pp.gif"
+class="profileGif"
+alt="Profile GIF">
+
+<h1>Piki Dwd</h1>
+
+<p class="subtitle">
+
+Premium TikTok Downloader
+
+</p>
+
+</header>
+
+<!-- ================= INFO ================= -->
+
+<section class="infoGrid">
+
+<div class="infoCard welcomeCard">
+
+<i class="fa-solid fa-hand infoIcon"></i>
+
+<p class="infoTitle">
+Sapaan
+</p>
+
+<h3
+class="infoValue"
+id="greeting">
+
+Memuat...
+
+</h3>
+
+</div>
+
+<div class="infoCard">
+
+<i class="fa-solid fa-battery-three-quarters infoIcon"></i>
+
+<p class="infoTitle">
+
+Baterai
+
+</p>
+
+<h3
+class="infoValue"
+id="batteryLevel">
+
+--%
+
+</h3>
+
+</div>
+
+<div class="infoCard">
+
+<i class="fa-solid fa-bolt infoIcon"></i>
+
+<p class="infoTitle">
+
+Charging
+
+</p>
+
+<h3
+class="infoValue"
+id="charging">
+
+Tidak
+
+</h3>
+
+</div>
+
+<div class="infoCard">
+
+<i class="fa-solid fa-wifi infoIcon"></i>
+
+<p class="infoTitle">
+
+Internet
+
+</p>
+
+<h3
+class="infoValue"
+id="networkStatus">
+
+Online
+
+</h3>
+
+</div>
+
+<div class="infoCard">
+
+<i class="fa-solid fa-clock infoIcon"></i>
+
+<p class="infoTitle">
+
+Jam
+
+</p>
+
+<h3
+class="infoValue clock"
+id="clock">
+
+Memuat...
+
+</h3>
+
+</div>
+
+<div class="infoCard">
+
+<i class="fa-solid fa-calendar-days infoIcon"></i>
+
+<p class="infoTitle">
+
+Tanggal
+
+</p>
+
+<h3
+class="infoValue date"
+id="date">
+
+Memuat...
+
+</h3>
+
+</div>
+
+<div class="infoCard">
+
+<i class="fa-solid fa-cloud-sun infoIcon"></i>
+
+<p class="infoTitle">
+
+Cuaca
+
+</p>
+
+<h3
+class="infoValue"
+id="weather">
+
+Memuat...
+
+</h3>
+
+</div>
+
+</section>
+
+<!-- ================= QUOTE GENERATOR ================= -->
+<section class="quoteSection">
+
+<div class="quoteBox">
+
+<h2>
+<i class="fa-solid fa-pen-nib"></i>
+Quote Generator
+</h2>
+
+<p class="quoteDesc">
+Masukkan kata atau quote favoritmu, lalu pilih animasi untuk preview video.
+</p>
+
+<!-- INPUT -->
+
+<div class="inputGroup">
+
+<label for="quoteInput">
+Quote
+</label>
+
+<input
+type="text"
+id="quoteInput"
+maxlength="50"
+placeholder="Contoh: Jangan menyerah sebelum mencoba..."
+autocomplete="off">
+
+</div>
+
+<!-- COUNTER -->
+
+<div class="counter">
+
+<span id="charCount">0</span>
+
+<span>/ 50</span>
+
+</div>
+
+<!-- ANIMATION -->
+
+<div class="inputGroup">
+
+<label for="animationType">
+
+Animasi Teks
+
+</label>
+
+<select id="animationType">
+
+<option value="fade">✨ Fade</option>
+
+<option value="slideLeft">⬅ Slide Left</option>
+
+<option value="slideRight">➡ Slide Right</option>
+
+<option value="zoom">🔍 Zoom</option>
+
+<option value="glow">🌈 RGB Glow</option>
+
+</select>
+
+</div>
+
+<!-- SPEED -->
+
+<div class="speed">
+
+<p>
+
+Kecepatan Animasi
+
+</p>
+
+<input
+type="range"
+id="speed"
+min="1"
+max="10"
+value="5">
+
+<div class="speedValue">
+
+<span>Lambat</span>
+
+<span id="speedValue">
+
+5
+
+</span>
+
+<span>Cepat</span>
+
+</div>
+
+</div>
+
+<!-- BUTTON -->
+<div class="bgButtons">
+
+<p>
+Background Quote
+</p>
+
+
+<button class="bgBtn" data-bg="bg1">
+Dark
+</button>
+
+
+<button class="bgBtn" data-bg="bg2">
+Cyber
+</button>
+
+
+<button class="bgBtn" data-bg="bg3">
+Neon
+</button>
+
+
+</div>
+
+<div class="quoteButtons">
+    
+    <div class="fontButtons">
+
+<p>
+Pilih Font
+</p>
+
+<button class="fontBtn" data-font="font1">
+Modern
+</button>
+
+<button class="fontBtn" data-font="font2">
+Cyber
+</button>
+
+<button class="fontBtn" data-font="font3">
+Elegant
+</button>
+
+</div>
+
+<button id="recordQuote">
+
+<i class="fa-solid fa-video"></i>
+
+Buat Video
+
+</button>
+
+
+<button id="downloadVideo" disabled>
+
+<i class="fa-solid fa-download"></i>
+
+Download Video
+
+</button>
+
+<button id="generate">
+
+<i class="fa-solid fa-wand-magic-sparkles"></i>
+
+Generate Preview
+
+</button>
+
+<button id="reset">
+
+<i class="fa-solid fa-rotate-left"></i>
+
+Reset
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= PREVIEW ================= -->
+
+<section class="resultSection">
+
+<div class="resultBox">
+
+<h2 class="resultTitle">
+
+<i class="fa-solid fa-eye"></i>
+
+Preview
+
+</h2>
+
+<div id="quoteResult">
+
+Masukkan quote untuk melihat preview.
+
+</div>
+
+<button id="copyQuote">
+
+<i class="fa-solid fa-copy"></i>
+
+Salin Quote
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= TIKTOK DOWNLOADER ================= -->
+<section class="downloadSection">
+
+<div class="downloadPanel">
+
+<h2 class="downloadTitle">
+
+<i class="fa-brands fa-tiktok"></i>
+
+TikTok HD Downloader
+
+</h2>
+
+<p class="downloadDesc">
+
+Tempel link video TikTok, lalu tekan tombol Download.
+
+</p>
+
+<!-- URL -->
+
+<div class="inputGroup">
+
+<label for="tiktokUrl">
+
+URL TikTok
+
+</label>
+
+<input
+type="url"
+id="urlInput"
+placeholder="https://www.tiktok.com/@username/video/xxxxxxxx"
+autocomplete="off">
+
+</div>
+
+<!-- BUTTON -->
+
+<button id="downloadBtn">
+
+<i class="fa-solid fa-download"></i>
+
+DOWNLOAD VIDEO
+
+</button>
+
+<!-- LOADING -->
+
+<div class="downloadLoading" id="downloadLoading">
+
+<div class="loader"></div>
+
+<p>
+
+<p id="statusText"></p>
+
+<div class="progress">
+    <div id="progressBar"></div>
+</div>
+
+<!-- RESULT -->
+
+<div class="downloadResult" id="downloadResult">
+
+    <img
+        id="videoThumbnail"
+        class="downloadThumb"
+        src=""
+        alt="Thumbnail Video">
+
+    <h3
+        id="videoTitle"
+        class="downloadVideoTitle">
+
+        Judul Video
+
+    </h3>
+
+    <p
+        id="videoAuthor"
+        class="downloadInfo">
+
+        @username
+
+    </p>
+
+    <p
+        id="videoDuration"
+        class="downloadInfo">
+
+        Durasi : --:--
+
+    </p>
+
+    <p
+        id="videoQuality"
+        class="downloadInfo">
+
+        Kualitas : HD
+
+    </p>
+
+    <a
+        id="downloadLink"
+        class="downloadLink"
+        href="#">
+
+        <i class="fa-solid fa-circle-down"></i>
+
+        Download MP4 HD
+
+    </a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= QUICK ACTION ================= -->
+
+<section class="quickAction">
+
+    <button id="scrollTop">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+</section>
+<!-- ================= QUICK ACTION ================= -->
+
+<section class="quickAction">
+
+<button id="scrollTop">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+</section>
+
+<!-- ================= POPUP ================= -->
+<!-- ================= POPUP ================= -->
+
+<div class="popupOverlay" id="popupOverlay">
+
+    <div class="popup">
+
+        <span class="popupClose" id="popupClose">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </span>
+
+        <div class="popupIcon">
+
+            <i class="fa-solid fa-triangle-exclamation"></i>
+
+        </div>
+
+        <h2 class="popupTitle">
+
+            Batas Karakter
+
+        </h2>
+
+        <p class="popupText">
+
+            Maksimal karakter yang diperbolehkan adalah <b>50 karakter</b>.
+            Silakan pendekkan quote yang ingin kamu gunakan.
+
+        </p>
+
+        <button class="popupBtn" id="popupBtn">
+
+            Mengerti
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ================= BACK TO TOP ================= -->
+
+<button id="backToTop">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h3>
+
+        Piki Website
+
+    </h3>
+
+    <p>
+
+        Premium TikTok HD Downloader dengan tampilan Cyber RGB,
+        Glassmorphism, dan animasi modern.
+
+    </p>
+
+    <div class="socials">
+
+        <a href="#" title="TikTok">
+
+            <i class="fa-brands fa-tiktok"></i>
+
+        </a>
+
+        <a href="#" title="Instagram">
+
+            <i class="fa-brands fa-instagram"></i>
+
+        </a>
+
+        <a href="#" title="YouTube">
+
+            <i class="fa-brands fa-youtube"></i>
+
+        </a>
+
+        <a href="#" title="GitHub">
+
+            <i class="fa-brands fa-github"></i>
+
+        </a>
+
+    </div>
+
+    <p class="copyright">
+
+        © 2026 Piki Website. All Rights Reserved.
+
+    </p>
+
+</footer>
+
+</div>
+
+</div>
+
+<!-- ================= MAIN JS ================= -->
+
+<script src="main.js"></script>
+<!-- ================= END ================= -->
+
+</body>
+
+</html>

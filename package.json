@@ -1,0 +1,13 @@
+{
+  "name": "tiktok-downloader-hd",
+  "version": "1.0.0",
+  "description": "TikTok HD Downloader",
+  "private": true,
+  "scripts": {
+    "start": "node api/tiktok.js"
+  },
+  "dependencies": {
+    "axios": "^1.11.0",
+    "express": "^5.1.0"
+  }
+}
